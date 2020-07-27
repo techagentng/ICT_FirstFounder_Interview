@@ -6,7 +6,7 @@ var main = document.querySelector(".main");
 var direction = document.querySelector(".direction");
 var side = document.querySelector(".side");
 
-document.getElementById("move").addEventListener("click", control);
+var eventt= document.getElementById("move").addEventListener("click", control);
 function control(){
     bar.style.visibility = "hidden";
     aside.style.width = "25vmax";
@@ -22,3 +22,27 @@ function control(){
     return false;
 }
 
+document.getElementById('move').addEventListener('click', close); // this click event element is a red bar, 
+																	//should be an input of checkbox,
+																  // then style the check state of the checkbox. See the code below. I have deadlines but u understand ur approach better
+
+function close(){
+	if(aside.style.width == "25vmax"){
+	   aside.classList.toggle("aside")	
+	   main.classList.toggle("main")	
+      side.classList.toggle("side")		   
+	}
+	
+}
+
+/*
+function close(){
+	if(move == "checked"){
+	   aside.classList.toggle("aside")	
+	   main.classList.toggle("main")	
+      side.classList.toggle("side")		   
+	}
+	
+}
+
+*/
